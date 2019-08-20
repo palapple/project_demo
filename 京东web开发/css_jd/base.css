@@ -1,0 +1,67 @@
+
+
+/* 公共样式 */
+
+/* 1.样式重置 */
+html, body, ul, ui, img, a, p, div, form, input{
+    padding: 0;
+    margin: 0;
+    /* 设置盒模型 */
+    box-sizing: border-box;
+    /* 去除移动端特有的点击高亮效果 */
+    /* transparent指的是无颜色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body{
+    /*sans-serif指的是默认值  */
+    font-family: "微软雅黑", sans-serif;
+    font-size: 13px;
+}
+a,
+a:hover{
+    color: #666;
+    text-decoration: none;
+}
+
+ul{
+    /* 去除序列项 */
+    list-style: none;
+}
+input{
+    outline: none;
+    border: none;
+    border: 1px solid #cccccc;
+}
+
+
+
+
+/* 2.提前写好一些浮动样式和边距样式 */
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.m_left10{
+    margin-left: 10px;
+}
+.m_right10{
+    margin-right: 10px;
+}
+.m_top10{
+    margin-top: 10px;
+}
+
+/* 通过伪类，清除样式 */
+/* 写dispaly： block，能强制使一些行内元素，成为块元素，可以设置边距 */
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}
