@@ -1,0 +1,227 @@
+
+#bg {
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* 这里用于居中显示，第一个-50%表表示水平居中，第二个-50%表示垂直居中 */
+	transform: translate(-50%, -50%); 
+	transition: all 2s;
+}
+.rotate{
+	transform: translate(-50%, -50%) rotateZ(-60deg)!important; /*  提高权重 */
+}
+
+/* 第一行元素设置 */
+.row1 .orb1, .row1 .orb2 {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -30px;
+}
+
+.row1 .orb2 {
+	margin-top: -280px;
+	margin-left: 500px;
+}
+
+/* 第二行元素设置 */
+.row2 .orb1, 
+.row2 .orb2, 
+.row2 .orb3
+{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 50%;
+	left: 50%;
+	margin-top: -280px;
+	margin-left: -500px;
+}
+.row2 .orb2 {
+	margin-top: -280px;
+	margin-left: 500px;
+}
+.row2 .orb3 {
+	margin-top: 50px;
+	margin-left: 0px;
+}
+
+/* 第三行元素设置 */
+.row3 .orb1,
+.row3 .orb2,
+.row3 .orb3{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	margin-top: 0;
+	margin-left: 0;
+}
+.row3 .orb2{
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+
+/* 设置为圆型，并设置为渐变色 */
+.row1  div, 
+.row2  div,
+.row3  div
+{
+	/* background:-webkit-linear-gradient(起始位置, 起始颜色， 结束颜色) */
+	background:-webkit-linear-gradient(top, #fff, #dedede);
+	border-radius: 50%;
+}
+
+/* 第一屏效果 */
+
+/* 对第一屏添加透视效果 */
+.section1 {
+	perspective: 1000px;
+}
+
+/* perspective 透视距离，和translateZ距离是不一样的，前者是眼球和屏幕的距离，后者是物体和屏幕的距离 */
+/* 物体和屏幕距离越大，其实就跟眼球距离越小，即眼球看到的东西就越大 */
+/* 这种从远到近，需要定义两个状态，一个是起始状态，一个是最后定住的状态 */
+/* 其实就是加了一个黑板的距离 */
+/* rotate表示反转的效果 */
+.comein .p1 {
+	transform: translate(-50%, -50%) translateZ(0px) rotateY(0deg);
+}
+
+
+.p1 {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%)  translateZ(500px) rotateY(-180deg);
+	width: 880px;
+	height: 320px;
+	background: url(../images/skin.gif) no-repeat;
+	transition: all 1s; /* 过渡不要忘却了 */
+ }
+
+
+ /* 第二屏效果 */
+ .section2 {
+	perspective: 1000px;
+ }
+
+ .p2 {
+	 position: absolute;
+	 text-align: center;
+	 width: 400px;
+	 height: 380px;
+	 left: 50%;
+	 top: 50%;
+	 transform: translate(-50%, -50%)  translateZ(-6000px) scale(0.2);
+	 transition: all 2s;
+ }
+/* 第三屏效果 */
+.section3 {
+	perspective: 1000px;
+ }
+
+ .p3 {
+	 position: absolute;
+	 text-align: center;
+	 width: 1440px;
+	 height: 760px;
+	 left: 50%;
+	 top: 50%;
+	 margin-left: -270px;
+	 margin-top: -283px;
+	 transform:  translateZ(1200px) rotateX(120deg);
+	 transition: all 4s;
+ }
+ .title3{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -412px;
+	margin-top: -10px;
+	transform: translateZ(1200px) rotateY(-60deg);
+	transition: all 4s;
+ }
+
+/* 第四屏效果 */
+.section4{
+	perspective: 1000px;
+}
+
+.p4{
+	position: absolute;
+	width: 1200px;
+	height: 700px;
+	left: 50%;
+	top: 50%;
+	margin-left: -400px;
+	margin-top: -300px;
+	transform:  translateZ(0x) rotateX(0deg);
+	transition: all 3s;
+}
+
+.title4-btn{
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+.pop1{
+	position: absolute;
+	left: 10%;
+	top: 10%;
+}
+.pop2{
+	position: absolute;
+	left: 30%;
+	top: 20%;
+}
+.pop4{
+	position: absolute;
+	left: 50%;
+	top: 25%;
+}
+.pop3{
+	position: absolute;
+	left: 10%;
+	top: 40%;
+}
+.title4{
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	margin-left: -50px;
+	margin-top: -50px;
+	transform:  translateZ(0px) rotateY(0deg);
+	transition: all 3s;
+}
+
+
+/* 动画组 */
+.row1 div {
+	animation: orbmove 60s linear infinite;
+}
+.row2 div {
+	animation: orbmove 80s linear infinite;
+}
+.row3 div {
+	animation: orbmove 90s linear infinite;
+}
+
+
+/* CSS3中的一个特性，translate，其实区别在于跟position是，它是相对位置 */
+@keyframes orbmove{
+	from{
+		transform: translateX(0px) rotate(0deg);
+	}
+	to{
+		transform: translateX(-2000px) rotate(-4000deg);
+	}
+}
+

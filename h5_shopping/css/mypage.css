@@ -1,0 +1,493 @@
+#fp-nav ul li a span { /*  提高层叠性 */
+	background: #f40!important;
+}
+
+/* 保持h5页面有最小值，使之不变形 */
+html, body .section{
+	min-height: 600px;
+	min-width: 1000px;
+}
+/* next设定为最高层级 */
+/* 稍微总结一下，每个css基本都有position，bottom/top，right/left，z-index可有可无，主要是看是否在前面显示，层级等级，越高级越往前显示 */
+/* 让组件隐藏，然后展示有两种方法，一个是设置属性为opacity为0，然后再JS操作把opacity设置为1，这种方法有淡入淡出的效果，还可以设置时间 */
+/* 而另外一种方法是设置属性 display：none； 再JS操作中.show()就能展示了 */
+.next { 
+	position: fixed;
+	bottom: 120px;
+	right: 10%;
+	z-index: 999;
+}
+
+/* 第一屏幕制作 start */
+
+/* 其实可以去别人的网站 F12，元素查看，把background的属性复制过来，就能使用了。 */
+.section1 {
+	background: #fadd67 url(../images/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
+}
+.fly {
+	position: absolute;
+	right: 20%;
+	top:10%;
+}
+.shirt01 {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    bottom: 335px;
+}
+.goods {
+    position: absolute;
+    left: 50%;
+    margin-left: -420px;
+    bottom: 150px;
+}
+.go {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+	z-index: 999;
+}
+
+/* 第二屏幕 */
+.section2 {
+	background: #84a2d4 url(../images/t1zdgpfi8exxca6rfn-2000-600.png) no-repeat center bottom;
+	z-index: 2;
+}
+
+.computer {
+	width: 990px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+
+	transform: translateX(-50%);
+	bottom: 0;
+}
+
+.search {
+	width: 222px;
+	height: 45px;
+	background: url(../images/search.png) no-repeat;
+	right: -30px;
+	bottom: 300px;
+	position: absolute;
+	display: none;
+}
+
+.search-words {
+	top: 5px;
+	right: 32px;
+	position: absolute;
+	opacity: 0;
+}
+
+.search-01 {
+	position: absolute;
+	right: 370px;
+	bottom: 300px;
+	display: none;
+}
+
+.goods-02 {
+	height: 100px;
+	position: absolute;
+	bottom: 217px;
+	right: 270px;
+	display: none;  
+}
+
+.words-01,
+.words-02 {
+	position: absolute;
+	bottom: 550px;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+.words-02 {
+	opacity: 0;
+
+}
+
+.shirt-02 {
+	position: absolute;
+	bottom: 345px;
+	left: 395px;
+	width: 100px;
+	display: none;
+	z-index: 10;
+}
+
+.cover {
+	position: absolute;
+	bottom: 334px;
+	right: 496px;
+	width: 101px;
+	height: 90px;
+	background-color: #fff;
+	z-index: 5;
+	display: none;
+}
+
+/* 这是第三屏 */
+.section3 {
+	background: #ef674d;
+    z-index: 1;
+}
+.main{
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	background: url(../images/main.png) no-repeat center center;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 50px;
+}
+
+.select {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	bottom: 0;
+	right: 8px;
+}
+
+.shirt-03,
+.t1f {
+	position: absolute;
+	left: 115px;
+	bottom: 200px;
+	display: none;
+
+}
+
+.img {
+	position: absolute;
+	top: 0;
+}
+
+.img-01-a {
+	opacity: 0;
+}
+
+.btn {
+	position: absolute;
+	bottom: 10px;
+}
+
+.btn-a {
+	opacity: 0;
+}
+
+/* 这是第四屏 */
+.section4 {
+	background: #fed url(../images/t1iresfnxaxxca6rfn-2000-600.png) no-repeat center bottom;
+
+}
+.cloud {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+}
+.word {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   bottom: 500px;
+}
+.words-04-a {
+   opacity: 0;
+}
+.car {
+   width: 500px;
+   position: absolute;
+   bottom: 50px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 50;
+}
+.car-img {
+   position: absolute;
+   bottom: 200px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: -1;  /* 负值 层级往下叠加 */
+   display: none;
+}
+
+.note {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 180px;
+	display: none;
+}
+
+
+.note-img {
+	position: absolute;
+	left: 60px;
+	top: 60px;
+	opacity: 0;
+}
+
+
+
+
+
+/* 这是第五屏 */
+.section5 {
+	background: #d04759 url(../images/t1yisqfa4exxa3gmkg-2000-1500.png);
+	/* overflow: hidden; */
+	perspective: 500;
+	-webkit-perspective: 500;
+	z-index: 1;
+}
+.words-05 {
+	position: absolute;
+	left: 20%;
+	top: 10%;
+	opacity: 0;
+}
+
+.card-05 {
+	position: absolute;
+	left: 20%;
+	bottom: 200px;
+	z-index: 10;
+}
+.order-05 {
+	position: absolute;
+	left: 27%;
+	bottom: 270px;
+}
+.t1f-05 {
+	position: absolute;
+	bottom: 800px;
+	left: 25%;
+	display: none;
+}
+.mouse-05 {
+	position: absolute;
+	right: 20%;
+	bottom: 200px;
+}
+.mouse-05-a {
+	opacity: 0;
+}
+.hand-05 {
+	position: absolute;
+	right: 24%;
+	bottom: -375px;
+}
+.overFlow {  /* 切掉 鼠标小尾巴 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* 这里的overflow： hidden； 就是为了隐藏鼠标的小尾巴 */
+	overflow: hidden;
+}
+
+
+/* 这是第6屏幕 */
+.section6 {
+	background: #84d9ed url(../images/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 25% 100%;
+}
+
+.box-06 {
+	position: absolute;
+	bottom: 500px;
+	right: 50%;
+	left: 123px;
+	z-index: 50;
+}
+.car-06 {
+	position: absolute;
+	right: 50%;
+	bottom: 0;
+	z-index: 55;
+}
+
+.cloud-06 {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+	animation: cloud6 30s;
+}
+
+@keyframes cloud6 {
+	50% {
+		left: 10%;
+	}
+}
+
+.pop-06 {
+	position: absolute;
+	bottom: 119px;
+	right: 48%;
+	display: none;
+	z-index: 50;
+}
+.boy-06 {
+	right: 50%;
+	bottom: 0;
+	position: absolute;
+	height: 100px;
+}
+.girl-06 {
+	position: absolute;
+	right: 315px;
+	bottom: 116px;
+	height: 123px;
+	display: none;
+	z-index: 50;
+}
+.door {
+	position: absolute;
+	right: 285px;
+	bottom: 116px;
+	opacity: 0;
+}
+
+.pop-07 {
+	position: absolute;
+	right:445px;
+	bottom: 400px;
+	z-index: 40;
+	display: none;
+}
+.words-06-a {
+	position: absolute;
+	left: 10%;
+	bottom: 479px;
+	display: none;
+}
+
+/* 这是第7屏动画 */
+.section7 {
+	background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+}
+.star {
+	position: absolute;
+    left: 50%;
+    bottom: 439px;
+    margin-left: -295px;
+    width: 0;
+    height: 20px;
+    background: url(../images/star.png) no-repeat;
+    background-size: 97px;
+}
+.good-07 {
+	position: absolute;
+	bottom: 382px;
+    left: 50%;
+    margin-left: -289px;
+    opacity: 0;
+
+}
+
+
+/* 这是第8屏动画 */
+
+.section8 {
+	background: url(../images/ksgw.png);
+}
+.beginShoping {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom:365px;
+}
+.btn-08-a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.again {
+	position: absolute;
+	bottom: 403px;
+	left: 50%;
+	margin-left: 240px;
+	cursor: pointer;
+}
+.hand-08 {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+
+
+
+
+/* 动画类 */
+/* 动画类的写法，基本是先定义一个类，然后再用已经class中定义好的去调用，用法如下，animation： 类名 时间 走动类型，是否循环等等 */
+/* 而定义类的写法， @keyframes 类名 {} 进度为50%时候的属性是多少，0%{}可以不写，因为上面已经定义好了。 */
+.updown {
+	animation: fly 3s linear infinite;
+}
+
+.shirt-updown {
+	animation: shirt01 2.5s linear infinite;
+}
+
+@keyframes fly{
+	0%{
+		top: 10%;
+	}
+	50% {
+		top: 20%;
+	}
+	100% {
+		top: 10%;
+	}
+}
+
+@keyframes shirt01{
+	50% {
+		bottom: 360px;
+	}
+	100% {
+		bottom: 355px;
+	}
+}
+
+.cloud-back1 {
+	animation: cloud 45s linear infinite;
+}
+
+@keyframes cloud {
+	50% {
+		left: -10%;
+	}
+	100% {
+		left: 50%;
+	}
+}
+
+.words-05-a {
+	animation: words5 3s forwards;
+	/* animation-fill-mode: forwards;  让我们的动画保持最后一帧状态 不循环 */
+	/* 这个比较特殊，用了透视和TranslateZ旋转 */
+}
+@keyframes words5 {
+	100% {
+		opacity: 1;
+		transform: translateZ(100px) rotateY(360deg);
+	}
+}
+
+.next_updown{
+	animation: next 0.8s linear infinite;
+}
+
+@keyframes next {
+	50% {
+		bottom: 100px;
+	}
+	100% {
+		bottom: 120px;
+	}
+}

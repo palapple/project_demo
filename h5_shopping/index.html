@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>购物网站</title>
+         <!-- 引入的  初识化css   fullpage css -->
+         <link rel="stylesheet" href="css/base.css" />
+         <!-- 引入自己的css  -->
+         <link rel="stylesheet" href="css/mypage.css" />
+         <link rel="stylesheet" href="css/jquery.fullPage.css" />
+         <!-- y这是一个jquery插件，所以先引入jquery -->
+         <script src="js/jquery.min.js"></script>
+          <!-- 如果想要 easing 缓动动画  那就引入 easing js -->
+         <script src="js/jquery.easing.1.3.js"></script>
+         <script src="js/jquery.fullPage.min.js"></script>
+         <!-- 引入自己的js -->
+         <script src="js/myPage.js"></script>
+</head>
+<body>
+    <!-- 右上角的入口链接，在href加入链接就可以使用 -->
+    <a href="#" class="go">
+        <img src="images/t1ldiffkjfxxxzhxzd-101-101.png" alt="">
+
+    <!-- next 下一屏幕 -->
+    <a href="javascript:;">
+        <img src="./images/t13fcsfklcxxa2xfli-174-61.png"  class="next next_updown" alt="">
+    </a>
+
+    <div id="fullpage">
+        <!-- 这是第1屏 -->
+        <!-- 第一屏相对简单，需要做动画效果，看css动画类 -->
+        <!-- 如果一个div 需要通过类进行控制，例如 section section1，写两个，即可共同控制了 -->
+        <div class="section section1">
+            <img src="./images/t1wsqsfgnaxxxmjxp6-470-50.png" class="fly updown" alt="">
+            <img src="./images/t1xccqfflgxxxild.png" class="shirt01 shirt-updown" alt="">
+            <img src='./images/t1iakufbxxxxctz4tl-824-274.png' class="goods" alt="">
+        </div>
+        <!-- 这是第2屏 -->
+        <!-- 这屏的动画，基本是用图片去遮掩图片，达到动态变化的效果，div的图片，用css来填充，url（）用法 -->
+        <!-- 看到很多类 都加了move，作用是最8屏，有一个重新看一次，把这些类的attr属性清零，达到重新开始-->
+        <div class="section section2">
+            <div class="computer move">
+                <div class="search move">
+                    <img src="./images/search-words.png" alt="" class="search-words">
+                </div>
+                <img src="./images/search-02-1.png" alt="" class="search-01">
+                <img src="./images/goods-441-218.png" alt="" class="goods-02">
+                <img src="./images/shirt-02-207-166.png" alt="" class="shirt-02">   
+                <!-- 这个cover的作用是，用一个div把掉落的沙发的空位，用来遮挡住 -->
+                <div class="cover move"></div>
+                
+            </div>
+            <img src="./images/words-01-361-25.png" alt="" class="words-01">
+            <img src="./images/words-02.png" alt="" class="words-02">
+        </div>
+        <!-- 这是第3屏 -->
+        <div class="section section3">
+            <div class="main">
+                <div class="select">
+                    <img src="./images/img-01.gif" alt="" class="img">
+                    <img src="./images/btn-01.gif" alt="" class="btn">
+                    <img src="./images/img-01-a.gif" alt="" class="img imag-01-a">
+                    <img src="./images/btn-01-a.gif" alt="" class="btn btn-a">
+                </div>
+                <img src="./images/t1f.png" alt="" class="t1f">
+                <img src="./images/shirt-02-207-166.png" alt="" class="shirt-03">
+            </div>
+        </div>
+        <!-- 这是第4屏 -->
+        <div class="section section4">
+            <img src="./images/cloud.png" alt="" class="cloud cloud-back1">
+            <img src="./images/words-04.png" alt="" class="word">
+            <img src="./images/words-04-a.png" alt="" class="word words-04-a">
+            <!-- 如果想让两个组件结合后一起走，可以使用一个div进行封装在一起，并添加成一个类名，这样子就可以同时控制这两个小组件 -->
+            <div class="car move">
+                <img src="./images/t1f.png" alt="" class="car-img">
+                <img src="./images/car.png" alt="">
+            </div>
+            <div class="note">
+                <img src="./images/t1sqosfx8bxxa9wx_i-173-47.png" alt="" class="note-img">
+                <img src="./images/t1.png" alt="" >
+            </div>
+        </div>
+        <!-- 这是第5屏 -->
+        <div class="section section5">
+            <img src="./images/t1h1atfbtxxxauw33d-541-28.png" alt="" class="words-05">
+            <img src="./images/t1b2mrfo8cxxxfselu-358-221.png" alt="" class="card-05">
+            <img src="./images/t1puypfatexxajuujj-139-130.png" alt="" class="order-05">
+            <img src="./images/t1f.png" alt="" class="t1f-05">
+            <!-- 这里的overflow类名，其实是因为图片太大，让他们几个封装在一起，然后在css中，对这个封装好的类名设置z-index低一点，这样子就可以藏起来 -->
+            <div class="overFlow">
+                    <img src="./images/t1c8gpfenexxav8lkd-205-819.png" alt="" class="mouse-05">
+                    <img src="./images/t1wbktfddaxxav8lkd-205-819.png" alt="" class="mouse-05 mouse-05-a">
+                    <img src="./images/t10zesfg4axxxdhbd4-170-375.png" alt="" class="hand-05">
+            </div>
+            
+        </div>
+        <!-- 这是第6屏 -->
+        <div class="section section6">
+            <img src="./images/t1kaesfxbbxxxprv.png" alt="" class="box-06">
+            <img src="./images/t1aissffjbxxa1caib-221-122.png" alt="" class="car-06">
+            <img src="./images/t1nrgqfalfxxbhn6zx-878-71.png" alt="" class="cloud-06">
+            <img src="./images/t1faqsfdxbxxbl8tyr-93-56.png" alt="" class="pop-06">
+            <img src="./images/t1ut1pfnnexxxb5emy-126-305.png" alt="" class="boy-06">
+            <img src="./images/t14nyrflxbxxaanhk9-87-294.png" alt="" class="girl-06">
+            <img src="./images/t1jfaaff4gxxcd.png" alt="" class="door">
+            <img src="./images/t1kzyqffnexxbcrepj-139-173.png" alt="" class="pop-07">
+            <img src="./images/t1lg0.png" alt="" class="words-06-a">
+        </div>
+        <!-- 这是第7屏 -->
+        <div class="section section7">
+            <div class="star move">
+            </div>
+            <img src="./images/t1wrqqfbddxxcbi8jm-72-40.png" alt="" class="good-07">
+        </div>
+        <!-- 这是第8屏 -->
+        <div class="section section8">
+            <a href="#" class="beginShoping">
+                <img src="./images/t12pksfedaxxx51i3j-389-156.png" alt="" >
+                <img src="./images/t1znypfhxdxxcubi7j-389-160.gif" alt="" class="btn-08-a">
+            </a>
+            <img src="./images/t1ulasfmldxxbheta4-105-34.png" alt="" class="again">
+            <img src="./images/t1ivgtfbvxxxcjub_4-170-449.png" alt="" class="hand-08">
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- 一点感想，写项目写得多才有这种效果，你刚开始的是就要把图片的名字写好一点，例如第5层级的hand，就写类名hand-05，同时本地图片名称也要写
+成hand-05.png，这样在项目检查，或者给别人看的时候，让别人通俗易懂 -->
