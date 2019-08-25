@@ -1,0 +1,12 @@
+
+//mint-ui 需要添加的插件
+
+{
+  "presets": ["env", "stage-0"],
+  "plugins": ["transform-runtime", ["component", [
+    {
+      "libraryName": "mint-ui",
+      "style": true
+    }
+  ]], "transform-remove-strict-mode"]
+}
